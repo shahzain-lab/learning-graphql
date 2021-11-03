@@ -16,11 +16,9 @@ const Pinned = () => {
                   id
                   name
                   description
-                  forkCount
-                  stargazerCount
                   url
                   updatedAt
-                  languages(first: 1) {
+                  languages(first: 4) {
                     edges {
                       node {
                         color
@@ -55,6 +53,18 @@ const Pinned = () => {
                             <h3 className="pinned__text--secondary">{moment(node.updatedAt).format('LL')}</h3>
                         </div>
                         <h4 className="pinned__text--paragraph">{node.description}</h4>
+                        <div className="pinned__item--stats">
+                            {node.languages?.edges?.map(({ node }: any) => (
+
+                                <div className="pinned__item--language">
+                                    <p style={{ width: '1.3rem', marginRight: '.3rem', borderRadius: '50%', backgroundColor: `${node.color}` }}></p>
+                                    <h3>{node.name}</h3>
+                                </div>
+
+
+                            ))}
+                        </div>
+                        <div className="pinned__item--counts"></div>
                     </div>
                 ))}
             </div>

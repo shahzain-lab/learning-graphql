@@ -49,3 +49,14 @@
   font-size: 1.3rem;
   color: #aaaaaa;
 }
+
+.pinned__item--stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pinned__item--language {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
