@@ -1,10 +1,10 @@
-import './style.css'
+import { NavLink } from "react-router-dom"
 
 const Nav = () => {
     return (
-        <div className="linkBox">
-            <a href="#user">Overview</a>
-            <a href="#oranization">Repositories</a>
+        <div className="u__center--item">
+            <NavLink to="/user" className="active navLinks">Overview</NavLink>
+            <NavLink to="/user/repos" className="navLinks">Repositories</NavLink>
         </div>
     )
 }

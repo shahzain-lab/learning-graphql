@@ -5,6 +5,9 @@ import App from './components/App/App';
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from "@apollo/client/link/context";
 import { GlobalProvider } from './context/AppContext';
+import {
+  BrowserRouter as Router,
+} from 'react-router-dom';
 
 const httpLink = createHttpLink({
   uri: 'https://api.github.com/graphql'
@@ -30,9 +33,11 @@ const client = new ApolloClient({
 ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-      <GlobalProvider>
-        <App />
-      </GlobalProvider>
+      <Router>
+        <GlobalProvider>
+          <App />
+        </GlobalProvider>
+      </Router>
     </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')

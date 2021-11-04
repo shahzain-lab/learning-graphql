@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { GlobalContext } from '../../../context/AppContext';
-import './style.css'
 
 
 const Search = () => {
