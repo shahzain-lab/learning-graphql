@@ -1,17 +1,27 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { GlobalContext } from '../../../context/AppContext';
 import './style.css'
 
 
 const Search = () => {
     const [search, setSearch] = useState('');
+    const { dispatch } = useContext(GlobalContext)
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        dispatch({ type: 'SEARCH_INPUT_VALUE', payload: search })
+    }
+
 
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>): void => {
         setSearch(e.target.value);
     }
+
     return (
-        <div className="searchBox">
+        <form className="searchBox" onSubmit={handleSubmit}>
             <input type="text" value={search} onChange={handleSearch} placeholder="Search..." />
-        </div>
+            <button disabled={search ? false : true}>Search</button>
+        </form>
     )
 }
 

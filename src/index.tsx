@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/main.scss';
 import App from './components/App/App';
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from "@apollo/client/link/context";
+import { GlobalProvider } from './context/AppContext';
 
 const httpLink = createHttpLink({
   uri: 'https://api.github.com/graphql'
@@ -29,7 +30,9 @@ const client = new ApolloClient({
 ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-      <App />
+      <GlobalProvider>
+        <App />
+      </GlobalProvider>
     </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')
