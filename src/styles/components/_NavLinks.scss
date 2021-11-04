@@ -1,0 +1,19 @@
+.navLinks {
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: all 0.2s;
+  font-style: none;
+  border-bottom: 1px solid $color-secondary-gray;
+  &:hover {
+    color: $color-secondary-light;
+    border-color: $color-secondary-light;
+  }
+}
+
+.active {
+  color: $color-secondary-light;
+  border-color: $color-secondary-light;
+}

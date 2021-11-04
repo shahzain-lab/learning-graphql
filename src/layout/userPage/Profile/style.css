@@ -1,9 +1,0 @@
-.profile {
-  display: flex;
-}
-
-.profile--stats {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}

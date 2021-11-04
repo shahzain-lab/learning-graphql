@@ -1,9 +1,10 @@
 import React from 'react';
+import { Route, Routes, Outlet } from 'react-router-dom';
 import LinkBox from '../../header/routeBox/LinkBox';
 import Nav from '../Nav/Nav';
 import UserDetail from '../userDetail/UserDetail';
 import Pinned from '../userStats/PinnedRepo/Pinned';
-import './style.css'
+import Repositories from '../userStats/Repo/Repositories';
 
 const UserProfile = () => {
 
@@ -14,7 +15,7 @@ const UserProfile = () => {
                 <UserDetail />
                 <div className="profile--stats">
                     <Nav />
-                    <Pinned />
+                    <Outlet />
                 </div>
             </div>
         </>

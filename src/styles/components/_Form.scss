@@ -3,26 +3,27 @@
   width: 100%;
   margin: 1rem 0;
   border-radius: 0.6rem;
+  height: 5%;
 
   & input {
-    width: 30vh;
+    width: 100vh;
     outline: none;
     font-size: 1.3rem;
     font-size: 1.4rem;
-    padding: 1.5rem 1rem;
-    transition: all 0.3s;
-    padding: 0.4rem 1rem;
-    border: 1px solid gray;
+    padding: 0 1rem;
+    border: none;
+    margin-right: 1rem;
+    border-bottom: 2px solid gray;
     color: $color-primary-light;
     background-color: $color-primary-dark;
-    &:focus {
-      width: 100vh;
-    }
   }
 
   & button {
+    width: 20%;
+    border: 1px solid gray;
     font-size: 1.5rem;
     padding: 0 1rem;
+    border-radius: 0.5rem;
     background: transparent;
     color: $color-primary-light;
   }

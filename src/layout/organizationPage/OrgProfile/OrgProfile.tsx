@@ -1,10 +1,12 @@
 import React from 'react'
+import LinkBox from '../../header/routeBox/LinkBox'
 
 const OrgProfile = () => {
     return (
-        <div>
+        <>
+            <LinkBox />
             organization
-        </div>
+        </>
     )
 }
 

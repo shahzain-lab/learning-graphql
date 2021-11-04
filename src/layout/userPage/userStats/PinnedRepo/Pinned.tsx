@@ -4,7 +4,6 @@ import { useContext } from 'react';
 import Error from '../../../../components/Error/Error';
 import Loading from '../../../../components/Loading/Loading';
 import { GlobalContext } from '../../../../context/AppContext';
-import './style.css'
 
 
 const Pinned = () => {
@@ -42,8 +41,6 @@ const Pinned = () => {
 
   if (loading) return <Loading />
   if (error) return <Error error={error} />
-  console.log(data);
-
   return (
     <div className="pinned">
       <h3 className="pinned__repo--text">Top Repositories:</h3>
@@ -65,8 +62,6 @@ const Pinned = () => {
                   <p style={{ width: '1.3rem', marginRight: '.3rem', borderRadius: '50%', backgroundColor: `${node.color}` }}></p>
                   <h3>{node.name}</h3>
                 </div>
-
-
               ))}
             </div>
             <div className="pinned__item--counts"></div>

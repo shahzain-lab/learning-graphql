@@ -1,16 +1,16 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import Search from '../seachBox/search';
-import './style.css'
 
 const LinkBox = () => {
     return (
-        <div>
-            <div className="linkBox">
-                <a href="#user">User</a>
-                <a href="#oranization">Organization</a>
+        <>
+            <div className="page--links">
+                <NavLink to="/user" className=" navLinks">User</NavLink>
+                <NavLink to="/organization" className=" navLinks">Organization</NavLink>
             </div>
             <Search />
-        </div>
+        </>
     )
 }
 

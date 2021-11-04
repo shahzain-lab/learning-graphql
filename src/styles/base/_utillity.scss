@@ -1,18 +1,12 @@
-.u__center--item {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.navLinks {
-  text-align: center;
-  width: 100%;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 2rem;
-  border-bottom: 1px solid gray;
+.App {
+  @include center;
 }
 
-.active {
-  color: #eee;
-  border-color: #eee;
+.user--links {
+  @include center;
+  margin-top: 3rem;
+}
+
+.page--links {
+  @include center;
 }

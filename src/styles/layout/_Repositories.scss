@@ -1,0 +1,66 @@
+.repo__contianer {
+  width: 100%;
+  border-bottom: 1px solid $color-dark-gray;
+  margin: 2.5rem 0;
+  height: 5%;
+
+  .repo__header {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    .repo__header--content {
+      display: flex;
+
+      a {
+        font-size: 2rem;
+        text-decoration: none;
+        color: $color-links-blue;
+      }
+      .repo__status {
+        border: 1px solid $color-dark-gray;
+        padding: 0.3rem 0.5rem;
+        border-radius: 20%;
+        margin: 0 1rem;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: $color-text-gray;
+      }
+    }
+
+    .repo__header--star {
+      margin-right: 3%;
+      padding: 0.3rem 0.5rem;
+      border-radius: 20%;
+      font-size: 1.4rem;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.2s;
+      color: $color-text-gray;
+      border: 1px solid $color-dark-gray;
+
+      &:hover {
+        color: $color-secondary-gray;
+        border-color: $color-secondary-gray;
+      }
+    }
+  }
+  .repo__description {
+    font-size: 1.3rem;
+    padding: 1rem 0;
+    color: $color-text-gray;
+  }
+
+  .repo__counts {
+    display: flex;
+    justify-content: space-between;
+
+    .repo__vote {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .repo__updated {
+    }
+  }
+}
