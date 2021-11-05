@@ -38,6 +38,7 @@
       color: $color-text-gray;
       border: 1px solid $color-dark-gray;
 
+      display: inline-block;
       &:hover {
         color: $color-secondary-gray;
         border-color: $color-secondary-gray;
@@ -58,9 +59,29 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
+      margin: 1rem 0;
+
+      .stars,
+      .fork {
+        padding: 0 1rem;
+        color: $color-text-gray;
+        font-size: 1.5rem;
+      }
+      .update {
+        color: $color-secondary-gray;
+        font-size: 1.1rem;
+      }
     }
 
     .repo__updated {
+      padding-top: 2rem;
+      color: $color-secondary-gray;
+      font-size: 1.1rem;
+
+      span {
+        color: $color-primary-light;
+        font-size: 1.2rem;
+      }
     }
   }
 }
