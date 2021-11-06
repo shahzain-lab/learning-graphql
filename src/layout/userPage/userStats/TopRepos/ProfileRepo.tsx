@@ -9,7 +9,6 @@ const ProfileRepo: React.FC<ProfileProps> = ({ node }) => {
     return (
         <div
             className="pinned__item"
-            key={node.id}
         >
             <div className="pinned__item--header">
                 <h3 className="pinned__text--primary"><a href={node.url} target="_blank">{node.name}</a></h3>

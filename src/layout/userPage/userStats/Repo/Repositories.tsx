@@ -50,6 +50,7 @@ const Repositories = () => {
     <div className="repos">
       {data?.user?.repositories?.edges.map(({ node }: UserNode<UserRepositories>) => (
         <Repository
+          key={node.id}
           node={node}
         />
       ))}

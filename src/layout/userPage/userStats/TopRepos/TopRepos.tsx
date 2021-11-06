@@ -24,6 +24,7 @@ const TopRepos = () => {
       <div className="pinned__box">
         {data?.user?.topRepositories?.edges.map(({ node }: UserNode<ProfileRepository>) => (
           <ProfileRepo
+            key={node.id}
             node={node}
           />
         ))}

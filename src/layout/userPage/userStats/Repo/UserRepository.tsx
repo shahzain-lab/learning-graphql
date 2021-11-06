@@ -12,7 +12,7 @@ const Repository: React.FC<RepositoryProps> = ({ node }) => {
     const [removeStar] = useMutation(REMOVE_STAR_FROM_REPO);
 
     return (
-        <div key={node.id} className="repo__contianer">
+        <div className="repo__contianer">
             <div className="repo__header">
                 <div className="repo__header--content">
                     <a href={node.url} target="_blank">{node.name}</a>

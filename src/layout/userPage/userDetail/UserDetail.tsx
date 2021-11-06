@@ -1,5 +1,5 @@
 // apollo/client
-import { gql, useQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 // date formater
 import moment from 'moment';
 // react
@@ -27,6 +27,7 @@ const UserDetail = () => {
       <img
         className="user--img"
         src={user?.avatarUrl}
+        alt={user?.name}
       />
 
       <div className="user__text--info">
