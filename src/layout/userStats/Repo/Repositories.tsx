@@ -1,13 +1,13 @@
 import { useQuery } from '@apollo/client';
 
 import { useContext } from 'react';
-import Error from '../../../../components/Error/Error';
-import Loading, { LoadingTask } from '../../../../components/Loading/Loading';
-import { GlobalContext } from '../../../../context/AppContext';
-import { UserNode, UserRepositories } from '../../../../types/repositories.types';
+import Error from '../../../components/Error/Error';
+import Loading, { LoadingTask } from '../../../components/Loading/Loading';
+import { GlobalContext } from '../../../context/AppContext';
+import { UserNode, UserRepositories } from '../../../types/repositories.types';
 import {
   GET_USER_REPOS,
-} from '../../../../graphql/Repositories';
+} from '../../../graphql/Repositories';
 import Repository from './UserRepository';
 
 const Repositories = () => {

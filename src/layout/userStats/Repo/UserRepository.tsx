@@ -1,8 +1,8 @@
 import { useMutation } from "@apollo/client";
-import { ADD_STAR_TO_REPO, GET_USER_REPOS, REMOVE_STAR_FROM_REPO } from "../../../../graphql/Repositories";
+import { ADD_STAR_TO_REPO, GET_USER_REPOS, REMOVE_STAR_FROM_REPO } from "../../../graphql/Repositories";
 // date formater
 import moment from 'moment';
-import { RepositoryProps } from "../../../../types/appProps.types";
+import { RepositoryProps } from "../../../types/appProps.types";
 
 
 const Repository: React.FC<RepositoryProps> = ({ node }) => {
@@ -15,7 +15,7 @@ const Repository: React.FC<RepositoryProps> = ({ node }) => {
         <div className="repo__contianer">
             <div className="repo__header">
                 <div className="repo__header--content">
-                    <a href={node.url} target="_blank">{node.name}</a>
+                    <a href={node.url} target="_blank" rel="noreferrer">{node.name}</a>
                     <span className="repo__status">{node.isPrivate ? 'Private' : 'Public'}</span>
                 </div>
                 <div className="repo__header--star" onClick={() => {

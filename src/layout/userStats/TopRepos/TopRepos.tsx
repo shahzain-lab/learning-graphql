@@ -1,10 +1,10 @@
 import { useQuery } from '@apollo/client';
 import { useContext } from 'react';
-import Error from '../../../../components/Error/Error';
-import Loading from '../../../../components/Loading/Loading';
-import { GlobalContext } from '../../../../context/AppContext';
-import { GET_USER_TOP_REPOS } from '../../../../graphql/TopRepos.query';
-import { ProfileRepository, UserNode } from '../../../../types/repositories.types';
+import Error from '../../../components/Error/Error';
+import Loading from '../../../components/Loading/Loading';
+import { GlobalContext } from '../../../context/AppContext';
+import { GET_USER_TOP_REPOS } from '../../../graphql/TopRepos.query';
+import { ProfileRepository, UserNode } from '../../../types/repositories.types';
 import ProfileRepo from './ProfileRepo';
 
 

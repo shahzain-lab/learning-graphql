@@ -3,7 +3,7 @@
   margin-top: 1rem;
 
   .pinned__repo--text {
-    @include fonts(1.5rem, 600);
+    @include fonts(1.5rem, bold);
     color: $color-secondary-light;
   }
 
@@ -21,6 +21,7 @@
       .pinned__item--header {
         padding: 1rem;
         @include flexPosition(space-between);
+
         .pinned__text--primary a {
           @include fonts(1.5rem, 500);
           @include fontStyle(none, none);

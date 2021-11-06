@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import LinkBox from '../../header/routeBox/LinkBox';
+import Search from '../seachBox/search';
 import Nav from '../Nav/Nav';
 import UserDetail from '../userDetail/UserDetail';
 
@@ -7,7 +7,7 @@ const UserProfile = () => {
 
     return (
         <>
-            <LinkBox />
+            <Search />
             <div className="profile">
                 <UserDetail />
                 <div className="profile--stats">

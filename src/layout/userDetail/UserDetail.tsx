@@ -5,10 +5,10 @@ import moment from 'moment';
 // react
 import { useContext } from 'react';
 // components
-import Error from '../../../components/Error/Error';
-import Loading from '../../../components/Loading/Loading';
-import { GlobalContext } from '../../../context/AppContext';
-import { GET_USER_PROFILE_DETAIL } from '../../../graphql/Profile.query';
+import Error from '../../components/Error/Error';
+import Loading from '../../components/Loading/Loading';
+import { GlobalContext } from '../../context/AppContext';
+import { GET_USER_PROFILE_DETAIL } from '../../graphql/Profile.query';
 
 
 const UserDetail = () => {
