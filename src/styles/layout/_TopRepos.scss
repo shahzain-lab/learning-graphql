@@ -3,8 +3,7 @@
   margin-top: 1rem;
 
   .pinned__repo--text {
-    font-size: 1.5rem;
-    font-weight: 600;
+    @include fonts(1.5rem, 600);
     color: $color-secondary-light;
   }
 
@@ -21,19 +20,15 @@
 
       .pinned__item--header {
         padding: 1rem;
-        display: flex;
-        justify-content: space-between;
-
+        @include flexPosition(space-between);
         .pinned__text--primary a {
-          font-size: 1.5rem;
-          text-decoration: none;
-          font-style: none;
+          @include fonts(1.5rem, 500);
+          @include fontStyle(none, none);
           color: $color-links-blue;
         }
 
         .pinned__text--primary a:active {
-          text-decoration: none;
-          font-style: none;
+          @include fontStyle(none, none);
         }
 
         .pinned__text--secondary {
@@ -42,19 +37,17 @@
       }
       .pinned__text--paragraph {
         padding: 1rem 0.5rem;
-        font-size: 1.3rem;
+        @include fonts(1.3rem, 500);
         color: $color-secondary-gray;
       }
 
       .pinned__item--stats {
-        display: flex;
-        justify-content: space-between;
+        @include flexPosition(space-between);
       }
 
       .pinned__item--language {
         margin: 0.5rem 0;
-        display: flex;
-        justify-content: space-between;
+        @include flexPosition(space-between);
       }
     }
   }

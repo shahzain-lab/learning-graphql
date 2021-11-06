@@ -8,8 +8,7 @@
   & input {
     width: 100vh;
     outline: none;
-    font-size: 1.3rem;
-    font-size: 1.4rem;
+    @include fonts(1.4rem, 500);
     padding: 0 1rem;
     border: none;
     margin-right: 1rem;
@@ -21,7 +20,7 @@
   & button {
     width: 20%;
     border: 1px solid gray;
-    font-size: 1.5rem;
+    @include fonts(1.5rem, 500);
     padding: 0 1rem;
     border-radius: 0.5rem;
     background: transparent;

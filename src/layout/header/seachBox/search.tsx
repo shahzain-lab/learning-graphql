@@ -8,7 +8,8 @@ const Search = () => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        dispatch({ type: 'SEARCH_INPUT_VALUE', payload: search })
+        dispatch({ type: 'SEARCH_INPUT_VALUE', payload: search });
+        setSearch('');
     }
 
 

@@ -1,5 +1,26 @@
-@mixin center {
+@mixin relativeCenter {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+@mixin absoluteCenter($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+@mixin flexPosition($content) {
+  display: flex;
+  justify-content: $content;
+}
+
+@mixin fonts($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin fontStyle($dec, $style) {
+  text-decoration: $dec;
+  font-style: $style;
 }

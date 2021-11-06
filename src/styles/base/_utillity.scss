@@ -1,12 +1,12 @@
 .App {
-  @include center;
+  @include relativeCenter;
 }
 
 .user--links {
-  @include center;
+  @include relativeCenter;
   margin-top: 3rem;
 }
 
 .page--links {
-  @include center;
+  @include relativeCenter;
 }

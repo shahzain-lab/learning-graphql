@@ -1,30 +1,19 @@
-import { gql, useQuery, useMutation } from '@apollo/client';
+// apollo/client
+import { gql, useQuery } from '@apollo/client';
+// date formater
 import moment from 'moment';
+// react
 import { useContext } from 'react';
+// components
 import Error from '../../../components/Error/Error';
 import Loading from '../../../components/Loading/Loading';
 import { GlobalContext } from '../../../context/AppContext';
+import { GET_USER_PROFILE_DETAIL } from '../../../graphql/Profile.query';
 
 
 const UserDetail = () => {
   const { state } = useContext(GlobalContext)
-  const GET_USER_PROFILE_DETAIL = gql`
-    query getUser($username: String!) {
-        user(login: $username) {
-          avatarUrl
-          name
-          bio
-         
-          followers {
-            totalCount
-          }
-          following {
-            totalCount
-          }
-          createdAt
-        }
-      }
-    `;
+
   const { loading, error, data } = useQuery(GET_USER_PROFILE_DETAIL, {
     variables: { username: state.searchValue ? state.searchValue : 'shahzain-lab' }
   });

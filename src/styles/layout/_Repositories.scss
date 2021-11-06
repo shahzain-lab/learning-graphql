@@ -2,11 +2,9 @@
   width: 100%;
   border-bottom: 1px solid $color-dark-gray;
   margin: 2.5rem 0;
-  height: 5%;
 
   .repo__header {
-    display: flex;
-    justify-content: space-between;
+    @include flexPosition(space-between);
     margin: 1rem 0;
     .repo__header--content {
       display: flex;
@@ -21,8 +19,7 @@
         padding: 0.3rem 0.5rem;
         border-radius: 20%;
         margin: 0 1rem;
-        font-weight: bold;
-        font-size: 1.2rem;
+        @include fonts(1.2rem, bold);
         color: $color-text-gray;
       }
     }
@@ -31,9 +28,8 @@
       margin-right: 3%;
       padding: 0.3rem 0.5rem;
       border-radius: 20%;
-      font-size: 1.4rem;
+      @include fonts(1.4rem, bold);
       cursor: pointer;
-      font-weight: bold;
       transition: all 0.2s;
       color: $color-text-gray;
       border: 1px solid $color-dark-gray;
@@ -46,18 +42,15 @@
     }
   }
   .repo__description {
-    font-size: 1.3rem;
+    @include fonts(1.3rem, 500);
     padding: 1rem 0;
     color: $color-text-gray;
   }
 
   .repo__counts {
-    display: flex;
-    justify-content: space-between;
-
+    @include flexPosition(space-between);
     .repo__vote {
-      display: flex;
-      justify-content: space-around;
+      @include flexPosition(space-around);
       align-items: center;
       margin: 1rem 0;
 
@@ -65,23 +58,48 @@
       .fork {
         padding: 0 1rem;
         color: $color-text-gray;
-        font-size: 1.5rem;
+        @include fonts(1.5rem, bold);
+      }
+      .stars {
+        .fa-star {
+          margin: 0 0.2rem;
+        }
       }
       .update {
         color: $color-secondary-gray;
-        font-size: 1.1rem;
+        @include fonts(1.1rem, 500);
       }
     }
 
     .repo__updated {
       padding-top: 2rem;
       color: $color-secondary-gray;
-      font-size: 1.1rem;
+      @include fonts(1.1rem, 500);
 
       span {
         color: $color-primary-light;
-        font-size: 1.2rem;
+        @include fonts(1.1rem, 500);
       }
+    }
+  }
+}
+
+.repos__fetchmore {
+  text-align: center;
+
+  .repos__fetch--btn {
+    @include fonts(2rem, 500);
+    background-color: $color-links-blue;
+    padding: 0.5rem 1.4rem;
+    color: $color-primary-light;
+    margin: 3rem 0;
+    border: 1px solid transparent;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: all 0.1s;
+
+    &:hover {
+      border: 1px solid $color-primary-light;
     }
   }
 }

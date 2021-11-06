@@ -2,9 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/main.scss';
 import App from './components/App/App';
+// context
+import { GlobalProvider } from './context/AppContext';
+// apollo/client
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from "@apollo/client/link/context";
-import { GlobalProvider } from './context/AppContext';
+// react-router
 import {
   BrowserRouter as Router,
 } from 'react-router-dom';
@@ -13,6 +16,7 @@ const httpLink = createHttpLink({
   uri: 'https://api.github.com/graphql'
 })
 
+// authentication
 const authLink = setContext((_, { headers }) => {
   return {
     headers: {
@@ -33,11 +37,11 @@ const client = new ApolloClient({
 ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-      <Router>
-        <GlobalProvider>
+      <GlobalProvider>
+        <Router>
           <App />
-        </GlobalProvider>
-      </Router>
+        </Router>
+      </GlobalProvider>
     </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')

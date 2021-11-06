@@ -1,11 +1,22 @@
-import React from 'react'
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
-const Loading = () => {
+export default function Loading() {
     return (
-        <div>
-            <h2>Loading....</h2>
+        <div className="loading__box">
+            <div className="loading">
+                <CircularProgress />
+            </div>
         </div>
-    )
+
+    );
 }
 
-export default Loading
+
+export function LoadingTask() {
+    return (
+        <Box sx={{ display: 'flex' }}>
+            <CircularProgress color="inherit" />
+        </Box>
+    );
+}

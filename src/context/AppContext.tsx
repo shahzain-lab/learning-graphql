@@ -1,19 +1,7 @@
 import { createContext, useReducer } from "react";
+import { ContextProps } from "../types/appProps.types";
+import { AppContext, State } from "../types/context.types";
 import AppReducer from "./AppReducer";
-
-export type State = {
-    searchValue: string
-}
-
-export type Action = {
-    type: 'SEARCH_INPUT_VALUE'
-    payload: string
-}
-
-interface AppContext {
-    state: State;
-    dispatch: React.Dispatch<Action>;
-}
 
 const initialState: State = {
     searchValue: '',
@@ -24,11 +12,9 @@ export const GlobalContext = createContext<AppContext>({
     dispatch: () => { }
 });
 
-interface Props {
-    children: React.ReactNode
-}
 
-export const GlobalProvider: React.FC<Props> = ({ children }) => {
+
+export const GlobalProvider: React.FC<ContextProps> = ({ children }) => {
     const [state, dispatch] = useReducer(AppReducer, initialState)
     return (
         <GlobalContext.Provider value={{ state, dispatch }}>
