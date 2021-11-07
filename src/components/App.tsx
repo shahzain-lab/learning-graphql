@@ -1,18 +1,22 @@
+import { useContext } from 'react';
 import { ErrorBoundary } from 'react-error-boundary'
+import { Link } from 'react-router-dom';
+import { GlobalContext } from '../context/AppContext';
 import AppRoutes from '../Routes/Routes';
 import ErrorFallback from './ErrorBoundry';
 
 
 function App() {
-
+  const { dispatch } = useContext(GlobalContext);
   return (
     <div className="App">
       <div className="container">
         <ErrorBoundary
           FallbackComponent={ErrorFallback}
           onReset={() => {
-            // reset the state of your app so the error doesn't happen again
-          }}
+            dispatch({ type: 'SEARCH_INPUT_VALUE', payload: '' })
+          }
+          }
         >
           <AppRoutes />
         </ErrorBoundary>

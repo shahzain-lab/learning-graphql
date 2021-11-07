@@ -15,7 +15,7 @@ export default function ErrorFallback({ error, resetErrorBoundary }: any) {
             />
             <h3>Something went wrong:</h3>
             <h4>{userError}</h4>
-            <button onClick={resetErrorBoundary}>Try again</button>
+            <button onClick={resetErrorBoundary}>Back</button>
         </div>
     )
 }
