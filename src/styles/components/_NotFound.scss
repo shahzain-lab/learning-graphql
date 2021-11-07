@@ -1,0 +1,36 @@
+.not-found {
+  @include absoluteCenter(40%, 40%);
+
+  text-align: center;
+
+  .not-found--block {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      font-size: 3rem;
+    }
+
+    button {
+      @include button;
+    }
+  }
+}
+
+.error-boundry {
+  @include absoluteCenter(50%, 50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  h3 {
+    font-size: 3rem;
+  }
+  h4 {
+    font-size: 1.4rem;
+    color: $color-text-gray;
+  }
+
+  button {
+    @include button;
+  }
+}

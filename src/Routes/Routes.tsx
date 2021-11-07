@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import UserProfile from '../layout/Profile/UserProfile';
 import TopRepos from '../layout/userStats/TopRepos/TopRepos';
 import Repositories from '../layout/userStats/Repo/Repositories';
+import NotFound from '../components/NotFound';
 
 
 const AppRoutes = () => {
@@ -13,6 +14,7 @@ const AppRoutes = () => {
                 <Route path="/overview" element={<TopRepos />} />
                 <Route path="/repos" element={<Repositories />} />
             </Route>
+            <Route path="/*" element={<NotFound />} />
         </Routes>
     )
 }

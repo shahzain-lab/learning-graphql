@@ -18,12 +18,7 @@
   }
 
   & button {
-    width: 20%;
-    border: 1px solid gray;
-    @include fonts(1.5rem, 500);
-    padding: 0 1rem;
-    border-radius: 0.5rem;
-    background: transparent;
-    color: $color-primary-light;
+    @include button;
+    margin: 0;
   }
 }
