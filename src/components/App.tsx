@@ -1,6 +1,5 @@
 import { useContext } from 'react';
-import { ErrorBoundary } from 'react-error-boundary'
-import { Link } from 'react-router-dom';
+import { ErrorBoundary } from 'react-error-boundary';
 import { GlobalContext } from '../context/AppContext';
 import AppRoutes from '../Routes/Routes';
 import ErrorFallback from './ErrorBoundry';
