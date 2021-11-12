@@ -15,7 +15,7 @@ import TrackCard from '../containers/track-card';
     title
     thumbnail
     length
-    moduleCount
+    modulesCount
     author {
       id
       name
