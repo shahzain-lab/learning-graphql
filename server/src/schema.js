@@ -4,11 +4,11 @@ const {gql} = require('apollo-server');
 const typeDefs = gql`
  "Get tracks array for homepage grid"
 type Query{
-    tracksForHome: [Tracks!]!
+    tracksForHome: [Track!]!
 }
 
  "tracks is a group of module that teaches about a specific topic"
- type Tracks{
+ type Track{
      id: ID!
      "the tracks title"
      title: String!
@@ -19,7 +19,7 @@ type Query{
      "the track approximatly length to complete"
      length: Int
      "no. of module the trks use"
-     moduleCount: Int
+     modulesCount: Int
  } 
 
 "Author of a complete Track or a Module"
